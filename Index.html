@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        console.log("Hello World");
+        let Age=22;                 //variable or literals
+        console.log(Age);
+        let NAME="TAIBA NASEEEM";
+        console.log(NAME);          //contant
+
+        const obj={
+            name:"Taiba",    //key=name, value=Taiba
+            Age:22         //key=Age, value=22
+        };
+
+        console.log(obj.Age);
+        
+
+        //Arrays
+        const a1=[1,2,3,4,5];
+        const a2=['heloo','world'];
+        console.log(a1,a2);
+
+
+        //Date
+        const currentDate=new Date();
+        console.log(currentDate);
+
+        //create Map
+        // const roles=new Map();
+        // roles.set(t1,"User1");
+        // roles.set(t2,"User2");
+
+        //create Set
+        const roless=new Set();
+        roless.add("User1");
+        roless.add("User2");
+
+
+        /* Strict and Abstract Equality*/
+        let x=10, 
+        str="10"
+        console.log(x == str); //Abstract
+        console.log(x === str) //Using Strictly
+
+        console.log(x === Number(str));
+        console.log(x !== Number(str));    //Using not Strictly
+
+        console.log(x != str);    //Using not Abstract
+
+
+        //Logical Operators
+
+        /*AND (&&) */
+        let x1=10, 
+        y1=19;
+        if( x1===10 && y1===5){
+            console.log("True");
+
+        }else{
+            console.log("True");
+        }
+
+        /* OR ( || ) */
+        let x2=10, y2=19;
+        if( x2===10 || y2===5){
+            console.log("True");
+
+        }else{
+            console.log("True");
+        }
+
+          /* NOT ( !=) */
+       let z= true;
+       console.log(!z);
+
+
+       /* Assignent Operator ( = ) */
+       // Like, let z=5
+       // chaining j=x=40;
+
+        /*
+         Arithmentic Addition
+         x= x + y; 
+        */
+
+        //For Example
+        let x3 = 10, y3=5;
+        x3=x3+y3;
+        console.log(x3); //print x=5
+
+        //Addition assignment operator
+        x3+=y3;
+
+        //Subtraction assignment operator
+        x3-=y3;
+
+        //multipication assignment operator
+        x3*=y3;
+
+        //divison assignment operator
+        x3/=y3;
+
+        //divison assignment operator
+        x3%=y3;
+
+
+
+        /* Bitwise Operator */
+
+        //left assignment operator
+        x3 <<= y3;
+
+        //right assignment operator
+        x3 <<= y3
+
+        //right shift zero assignment operator
+        x3 >>>= y3
+
+        //AND ( & ) assignment operator
+        x3 &= y3
+
+        //OR ( | ) assignment operator
+        x3 |= y3
+
+        //XOR ( ^ ) assignment operator
+        x3 ^= y3
+
+
+
+
+        /* Typeof Operator */ 
+        /*
+            undefined
+            null
+            boolean
+            numbers
+            string
+            symbol
+            object
+        */
+
+        //For example
+
+        console.log(typeof 1);
+        console.log(typeof "taiba");
+        console.log(typeof true);
+
+        //and
+        console.log(typeof null);
+        console.log(typeof function() {});
+
+        /* Comma ( , ) */
+        let a=78,p=78;
+
+
+        /* Destructing Assignment Operators */
+        // New in EcmaScript
+
+        //normal object declaration
+        const obj1={
+            w:1,
+            e:2,
+            r:3,
+            t:5
+        };
+
+        //destructing assignment operator
+        const {w,e,r,t}=obj1;
+
+        //print variables
+        console.log(w);
+        console.log(e);
+        console.log(r);
+
+        /* Destructing assignment opertaor with array */
+        
+        //For example,
+        //declare array
+        const arry=[1,2,3,4,5,6];
+
+        //destructing assignment operator
+        let [k,j,h,...rest]=arry;
+        console.log(k);
+        console.log(j);
+        console.log(h);
+
+        //Using spread operator(....)
+        console.log(rest); //print remaining
+
+
+        /*  Operator Precedence */
+
+        //For example
+        let x5;
+
+        // x=(5 + 3) * 2;
+        // x=5+6;
+        ///x=11;
+        //  11;
+
+        //console.log(x);
+
+        //anther example
+
+        x5 = 20 / 4 + 2 * ( 7 + 4 - 2 );
+        // x5=20/4+2*(9);
+        // x5=5+2*(9);
+        // x5=5+18;
+        // x5=23;
+        // 23;
+
+        console.log(x5);
+
+
+
+        /* Member Access(.) */
+        //syntax
+        //object.property;
+        
+        //for example
+        const obj5={id:"1",name:"taiba"};
+        console.log(obj5.name);
+
+
+        /* Computed Member Access[] */
+        //for example
+
+        console.log(obj5["name"]);
+
+        /* in Operator */
+        //For exmaple
+
+        //declare object
+        const car={cname:"BMW", modal:"i8", year:"2015"};
+        console.log("cname" in car);
+
+
+        /* Operator new */
+        //new operator use to create instance of the object
+
+        class Model{
+            constructor(){
+
+            }
+        }
+        //creating an instance of he Model class
+        const c1=new Model();
+
+        //creating another instance
+        const c2= new Model();
+
+
+        //Functions
+
+        function Magic(){
+            return "Hello world";
+        }
+
+        //declare object with property
+        const obj6={f:Magic};
+        console.log(obj6.f());
+
+
+
+        /*  Function Arguments*/
+        // for example
+
+        function demo(d,g){
+            return (d+g)/2;
+        }
+        console.log(demo(5,40));
+
+
+        /* Anonymous function */
+
+        const f=function(){
+            //statements
+
+        }
+        f();
+
+        //for example
+
+        const o={
+            name:"Anonymous function",
+            invoke:function(){
+                return "You called me!"
+            }
+        };
+        console.log(o.invoke());
+
+
+        /*  Arrow Notation  */
+        /*
+        * 1) You can omit the function
+        * 2) If the function take ine singke parameter then yoy can omit the parentheses.
+        * 3) If your function only have single statement then you can omiy curly braces{}.
+         * 
+        */
+/*
+        const f1=function()
+        {
+            return "hello everyone";
+        }
+
+        //Using Arrow Function
+        const f1= ()=> "Hey everyone";
+        
+        //Using argument
+          const f2=function(arg1)
+          {
+              return `Value of the argument: ${arg1}`;
+          }
+
+          //Using arrow function with argument
+          const f2 = arg1=> `Value of the argument: ${arg1}`;
+
+          //Using two arguments
+          const f3 = function(arg1,arg2){
+              return arg1*arg2;
+          }
+          const f3=(arg1,arg2) => arg1*arg2;
+
+        */
+
+
+
+          /*this keyword**/
+          /* refers to current object */
+
+          const obj7 ={
+              name:"Taiba",
+              Magic(){
+                  return `hello${this.name}`;
+              }
+          }
+          //call magic method
+          console.log(obj7.Magic());
+
+
+
+
+          /*  Destructing Arguments */
+
+          //For example
+          
+          const o1={
+            w1:"Taiba",
+            w2:"Naseem",
+            w3:"Ashraf"
+          };
+
+          //create function
+          function getData({w1,w2,w3}){
+              return `${w1} ${w2} ${w3}`;
+          }
+          //call function
+          console.log(getData(o1));
+
+          //Using Array
+          const array=["Taiba","Naseem","Ashraf"];
+
+          //declare function
+          function getdataa([w1,w2,w3]){
+            return `${w1} ${w2} ${w3}`;
+
+          }
+
+          //call function
+          console.log(getdataa(array));
+
+
+
+          /* call() Method */
+          //for example
+          //declare functionn
+
+          function Magic1(){
+              return  `Welcome, to ${this.name}`;
+          }
+
+          //create two objects
+
+          const object1={name:"Taiba"};
+          const object2={name:"Naseem"};
+
+          //call function
+          console.log(Magic1.call(object1));
+
+          console.log(Magic1.call(object2));
+
+
+
+          /*Variable Scope */
+          //for example
+
+          function f4(x){
+            return x/2;
+          }
+          //call function
+          console.log(f4(10));
+          console.log(x)
+
+
+
+          /* Lexical Scope */
+           //for example
+
+           //two functions
+           function func1(){
+               console.log("function one");
+           }
+           function func2(){
+               console.log("function two");
+           }
+
+           //call random functions
+           func1();
+           func2();
+           func1();
+
+
+
+           //consider this example
+           //declare variable
+           const v=6;
+           //declare function
+           function f5(){
+               console.log(v);
+               console.log(i);
+           }
+            //declare variable 
+            const i=8;
+
+           //call function
+           f5();
+
+          
+
+
+
+           /* Gblobal & Block Scoping */
+
+
+
+            /** Global Scoping  **/
+
+            const user={
+                name:"Taiba",
+                subs:4000
+                }
+
+                function show(){
+                    console.log(
+                     `${user.name} You HAve ${user.subs} Subscribers `);
+                }
+
+
+                function Make(){
+                    console.log(
+                     `Thank You So Much ${user.subs} Subscribers `);
+                }
+
+                show();
+                Make();
+
+                /** Block Scoping  **/
+
+                //foe example
+                console.log("Block Start...");
+                {
+                    console.log("Inside Block");
+                    const u=8;
+                    console.log(u);
+                }
+                console.log("Block End");
+                console.log('outside of the block: u=${u}');
+
+
+
+
+
+                /**  Advance JavaScript **/
+
+                //Object
+                //For example
+
+                const objectt={
+                    name:"taiba",
+                    age:22
+
+                }
+                console.log(objectt);
+                
+                //Array vs Object
+
+                //For example
+                const object11={
+                    t1:"TAIBA",
+                    t2:"NASEEM",
+                    t3:"ASHRAF"
+                }
+                for(let j in object11)
+                {
+                    console.log(j);
+                }
+
+                for(let k in object11)
+                {
+                    console.log(object11[k]);
+                }
+
+                /** Object Reference **/
+
+                    const objt={};
+                    const y=objt;
+                    y.d="property created by refernce"
+                    console.log(objt.d);
+
+
+
+
+                /**  CLASS **/
+                class Model1{
+                    constructor(Mno,Mname){
+                        this.Mno=Mno;
+                        this.Mname=Mname;
+
+                    }
+                    show(){
+                        console.log(`Modal Number: ${this.Mno}  Modal Name: ${this.Mname} `);
+                    }
+
+                }
+                //create instance of the class
+                const o11=new Model1(680,"Audi");
+                o11.show();
+                const o22=new Model1();
+
+
+                //use if instanceof keyword
+                console.log(o11 instanceof Model1);
+
+
+
+
+                /** Static Methods **/
+                //for example
+
+                class StaticCLassMethod{
+                    constructor(){
+                        console.log(this.constructor.onCall());
+                    }
+                    static onCall(){
+
+                        return "This is a staic method";
+                    }
+                }
+                //create object
+                const st =new StaticCLassMethod();
+
+                console.log(StaticCLassMethod.onCall());
+
+
+                /** Inheritance **/
+                class Persosn{
+                    constructor(fname,lname){
+                        this.fname=fname;
+                        this.lname=lname;
+                    }
+                }
+                class Age11 extends Persosn{
+                    constructor(age){
+                        super("Taiba","Naseem")
+                        this.age=age;
+                    }
+                    Show1(){
+                        console.log(this.fname+" "+this.lname);
+                        console.log(`Your age is ${this.age}`)
+                    }
+                }
+                const age1=new Age11(22);
+                age1.Show1();
+
+                console.log(age1.fname);
+
+
+
+
+                /** Polymorphism**/
+                class Employee{
+                    constructor(name11,age11){
+                        this.name11=name11;
+                        this.age11=age11;
+                    }
+                    EmployeeName(){
+                        console.log(`Employee name ${this.name11}`);
+                    }
+                }
+                class Member extends Employee{
+                    constructor(name11,salary){
+                        super(name11);
+                        this.name11=name11;
+                        this.salary=salary;
+                        this.age11=22;
+                    }
+                    EmployeeName(){
+                        console.log(`Employee name ${this.name11}, Age ${this.age11}, and Salary ${this.salary}`);
+                    }
+                }
+                const mb=new Member("Neel Patel",35000)
+                mb.EmployeeName();
+
+                //Object.to String();
+
+                //for example
+
+                const dt=new Date();
+                console.log(typeof dt.toString());
+                console.log(typeof dt);
+
+
+
+                /** Maps **/
+                //for example
+                const Mymaps=new Map();
+                //create three variables
+                let keyString="KeyString",
+                keyObj={},
+                keyFunc=function(){};
+
+                //use set() methos to set key => value
+                Mymaps.set(keyString,"keyString Value");
+                Mymaps.set(keyObj,"keyObj Value");
+                Mymaps.set(keyFunc,"keyFunc Value");
+
+                //know size of the map object
+                console.log(Mymaps.size);
+
+
+                //using get() method print maps object values
+                console.log(Mymaps.get(keyString));
+                console.log(Mymaps.get(keyString));
+                console.log(Mymaps.get(keyFunc));
+
+
+                //another way to create map object
+                const nNewMap=new Map([
+                    [1,'One'],
+                    [2,'two'],
+                    [3,'three'],
+                ]);
+                //iterate this map object using forEach method
+                nNewMap.forEach(function(value,key){
+                    console.log(`map keys: ${key}, Values : ${value}`);
+                });
+
+
+                /** Weak Map **/ //weak map is not iterateable
+
+                let weakmap=new WeakMap();
+                let ji={};
+                ji1={};
+
+                //set weakmap key and value
+                weakmap.set(ji,"Private");
+                weakmap.set(ji1,"Private Data");
+
+                console.log(weakmap.get(ji));
+                console.log(weakmap.get(ji1));
+
+
+
+                /**  Exception Handling **/
+                try{
+                    variable;
+                    console.log("Try Block");
+                }catch(err){
+
+                    console.log(err.message);
+                    console.log(err.message);
+                    console.log(err.message);
+                }
+
+
+
+
+
+                /**     Write a program to reverse a number **/
+
+                function reverseNumber(n){
+                    n=n+ "";
+                    let num=n.split("").reverse().join("");
+                    return num;
+                }
+                console.log(reverseNumber(123456789));
+
+
+                  /**     Write a program to reverse a number without using predefined functions **/
+                
+                  function reverseFunc(num){
+                      let n=num.toString();
+                      const number=[];
+                      let str="";
+                      for(let i=n.length-1,k=0; i>=0; i--,k++)
+                      {
+                          number[k]=n[i];
+                          str=str+number[k];
+                      }
+                      return parseInt(str);
+                  }
+                  console.log(reverseFunc(123456789));
+
+
+
+
+              /**     Write a program to minimum ad maximum number from an array element **/
+                  //minimum number
+              let min = (array,min=array[0])=>{
+                  for(let i=0;i<array.length;i++){
+                    if(min > array[i]) min= array[i];
+                  }
+                return min;
+              }
+
+                    //miximum number
+                    let max = (array,max=array[0])=>{
+                  for(let i=0;i<array.length;i++){
+                    if(max > array[i]) max= array[i];
+                  }
+                return max;
+              }
+
+              //create an array
+              console.log("Minimum value of an array element"+min(arry));
+              console.log("Miximum value of an array element"+max(arry));
+
+
+
+
+
+              /** Sort an Array in Ascending Order  **/
+
+              let sort = array =>{
+                const arry2=[];
+              let pos=0,max=array[0],min=array[0];
+
+              //maximum number
+                for(let j=0;j<array.length;j++){
+                    if(max < array[j]){
+                        max=array[j];
+                    }
+                }
+            //two for loop
+                for (let p=0; p< array.length;p++){
+                    for(let h=0;h<array.length;h++){
+                        if(min > array[h]){
+                            min= array[h];
+                            pos=h;
+                        }
+                    }
+                    arry2[j]=min;
+                    array[pos]=null;
+                    min=max;
+                }
+                return arry2;
+               
+              };
+              let arry1=[1,-5,-3,2,4];
+              console.log(sort(arry1));
+
+
+
+
+
+
+              /** Sum of Array **/
+
+              let arrry=[1,2,3,4,5,6];
+              let arrsum=0;
+
+              //for each
+              arrry.forEach(element =>{
+                  //console.log(element);
+                  arrsum=arrsum+element;
+              });
+            console.log(arrsum);
+
+              /** Sum of 2D Array **/
+              let multi=[[1,2,3],[4,5,6],[7,8,9]];
+              let multisum=0;
+
+              for(let g=0;g< multi.length;g++){
+                  //console.log(multi[g]);
+                multi[g].forEach(element =>{
+                  //console.log(element);
+                  multisum=multisum+element;
+              });
+            }
+            console.log(multisum);
+              
+
+
+
+             
+
+
+
+
+    </script>
+    
+</body>
+</html>
